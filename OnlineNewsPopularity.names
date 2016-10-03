@@ -65,7 +65,8 @@
     16. data_channel_is_socmed:        Is data channel 'Social Media'?
     17. data_channel_is_tech:          Is data channel 'Tech'?
     18. data_channel_is_world:         Is data channel 'World'?
-    19. kw_min_min:                    Worst keyword (min. shares)
+    
+	19. kw_min_min:                    Worst keyword (min. shares)
     20. kw_max_min:                    Worst keyword (max. shares)
     21. kw_avg_min:                    Worst keyword (avg. shares)
     22. kw_min_max:                    Best keyword (min. shares)
@@ -80,7 +81,8 @@
                                        Mashable
     30. self_reference_avg_sharess:    Avg. shares of referenced articles in
                                        Mashable
-    
+    //Combined 31 to 37 into day_of_week 
+	// values from 1 to 7 for monday to sunday
     31. weekday_is_monday:             Was the article published on a Monday?
     32. weekday_is_tuesday:            Was the article published on a Tuesday?
     33. weekday_is_wednesday:          Was the article published on a Wednesday?
@@ -88,7 +90,8 @@
     35. weekday_is_friday:             Was the article published on a Friday?
     36. weekday_is_saturday:           Was the article published on a Saturday?
     37. weekday_is_sunday:             Was the article published on a Sunday?
-    38. is_weekend:                    Was the article published on the weekend?
+    
+	38. is_weekend:                    Was the article published on the weekend?
     39. LDA_00:                        Closeness to LDA topic 0
     40. LDA_01:                        Closeness to LDA topic 1
     41. LDA_02:                        Closeness to LDA topic 2
