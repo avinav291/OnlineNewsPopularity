@@ -40,6 +40,8 @@
 
 7. Attribute Information:
      0. url:                           URL of the article
+     
+     //<Arjun>
      1. timedelta:                     Days between the article publication and
                                        the dataset acquisition
      2. n_tokens_title:                Number of words in the title
@@ -56,7 +58,9 @@
     11. average_token_length:          Average length of the words in the
                                        content
     12. num_keywords:                  Number of keywords in the metadata
-    
+    //</Arjun>
+  
+    <Avinav>
     //Combined 13-18 to data_channel_category
     //Alloted Values 1-6 and 0 if not available
     13. data_channel_is_lifestyle:     Is data channel 'Lifestyle'?
@@ -66,7 +70,11 @@
     17. data_channel_is_tech:          Is data channel 'Tech'?
     18. data_channel_is_world:         Is data channel 'World'?
     
+<<<<<<< Updated upstream
 	19. kw_min_min:                    Worst keyword (min. shares)
+=======
+    19. kw_min_min:                    Worst keyword (min. shares)
+>>>>>>> Stashed changes
     20. kw_max_min:                    Worst keyword (max. shares)
     21. kw_avg_min:                    Worst keyword (avg. shares)
     22. kw_min_max:                    Best keyword (min. shares)
@@ -75,6 +83,7 @@
     25. kw_min_avg:                    Avg. keyword (min. shares)
     26. kw_max_avg:                    Avg. keyword (max. shares)
     27. kw_avg_avg:                    Avg. keyword (avg. shares)
+    
     28. self_reference_min_shares:     Min. shares of referenced articles in
                                        Mashable
     29. self_reference_max_shares:     Max. shares of referenced articles in
@@ -90,13 +99,22 @@
     35. weekday_is_friday:             Was the article published on a Friday?
     36. weekday_is_saturday:           Was the article published on a Saturday?
     37. weekday_is_sunday:             Was the article published on a Sunday?
+<<<<<<< Updated upstream
     
 	38. is_weekend:                    Was the article published on the weekend?
+=======
+    38. is_weekend:                    Was the article published on the weekend?
+    
+
+>>>>>>> Stashed changes
     39. LDA_00:                        Closeness to LDA topic 0
     40. LDA_01:                        Closeness to LDA topic 1
     41. LDA_02:                        Closeness to LDA topic 2
     42. LDA_03:                        Closeness to LDA topic 3
     43. LDA_04:                        Closeness to LDA topic 4
+    
+    </Avinav>
+    <Arpit>
     44. global_subjectivity:           Text subjectivity
     45. global_sentiment_polarity:     Text sentiment polarity
     46. global_rate_positive_words:    Rate of positive words in the content
@@ -105,6 +123,9 @@
                                        tokens
     49. rate_negative_words:           Rate of negative words among non-neutral
                                        tokens
+    
+
+
     50. avg_positive_polarity:         Avg. polarity of positive words
     51. min_positive_polarity:         Min. polarity of positive words
     52. max_positive_polarity:         Max. polarity of positive words
@@ -116,6 +137,7 @@
     58. abs_title_subjectivity:        Absolute subjectivity level
     59. abs_title_sentiment_polarity:  Absolute polarity level
     60. shares:                        Number of shares (target)
+    </Arpit>
 
 8. Missing Attribute Values: None
 
