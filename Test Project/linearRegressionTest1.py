@@ -19,7 +19,7 @@ csv_x = np.delete(csv_x, (-1), axis=1)
 csv_x = np.array(csv_x).astype(np.float)
 csv_y = np.array(csv_y).astype(np.float).reshape(-1, 1)
 
-with open('../OnlineNewsPopularity/theta_linearReg1_v3 21k.csv', 'r') as t:
+with open('../theta v4 21k.csv', 'r') as t:
     reader = csv.reader(t)
     theta = list(reader)
 
@@ -35,4 +35,4 @@ totalErr = 0
 for i in range(15000, 20000):
     totalErr += error[i][0]/csv_y[i][0]
 
-print totalErr/5000
+print totalErr/50
