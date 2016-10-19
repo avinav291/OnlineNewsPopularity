@@ -1,0 +1,132 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LinearRegression -S 0 -C -R 1.0E-8 -num-decimal-places 4
+Relation:     normalizedDataWithShares-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    21103
+Attributes:   60
+              attribute_1
+              attribute_2
+              attribute_3
+              attribute_4
+              attribute_5
+              attribute_6
+              attribute_7
+              attribute_8
+              attribute_9
+              attribute_10
+              attribute_11
+              attribute_12
+              attribute_13
+              attribute_14
+              attribute_15
+              attribute_16
+              attribute_17
+              attribute_18
+              attribute_19
+              attribute_20
+              attribute_21
+              attribute_22
+              attribute_23
+              attribute_24
+              attribute_25
+              attribute_26
+              attribute_27
+              attribute_28
+              attribute_29
+              attribute_30
+              attribute_31
+              attribute_32
+              attribute_33
+              attribute_34
+              attribute_35
+              attribute_36
+              attribute_37
+              attribute_38
+              attribute_39
+              attribute_40
+              attribute_41
+              attribute_42
+              attribute_43
+              attribute_44
+              attribute_45
+              attribute_46
+              attribute_47
+              attribute_48
+              attribute_49
+              attribute_50
+              attribute_51
+              attribute_52
+              attribute_53
+              attribute_54
+              attribute_55
+              attribute_56
+              attribute_57
+              attribute_58
+              attribute_59
+              attribute_60
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+attribute_60 =
+
+     50.8706 * attribute_3 +
+    -25.9504 * attribute_4 +
+     37.5498 * attribute_7 +
+    -26.1713 * attribute_8 +
+     33.934  * attribute_10 +
+    -61.4905 * attribute_11 +
+    -21.385  * attribute_14 +
+     74.6598 * attribute_16 +
+    121.7669 * attribute_17 +
+     79.9048 * attribute_19 +
+     25.95   * attribute_21 +
+    -70.5438 * attribute_24 +
+    -67.3176 * attribute_25 +
+    -16.9016 * attribute_26 +
+    288.932  * attribute_27 +
+     49.2018 * attribute_28 +
+     46.3619 * attribute_30 +
+    -14.0265 * attribute_32 +
+    -22.4506 * attribute_33 +
+    -15.4405 * attribute_34 +
+     27.9806 * attribute_35 +
+     22.6922 * attribute_36 +
+     14.7077 * attribute_37 +
+    113.5044 * attribute_38 +
+  -3961.8551 * attribute_39 +
+  -3355.9995 * attribute_40 +
+  -4587.7777 * attribute_41 +
+  -3789.4454 * attribute_42 +
+  -4330.4198 * attribute_43 +
+     41.721  * attribute_44 +
+    -36.3324 * attribute_45 +
+     30.1364 * attribute_47 +
+     39.7111 * attribute_48 +
+    -28.6829 * attribute_49 +
+     18.0536 * attribute_50 +
+    -15.9711 * attribute_51 +
+    -39.5965 * attribute_52 +
+    -23.3813 * attribute_53 +
+     21.3002 * attribute_54 +
+     16.5772 * attribute_55 +
+     24.6553 * attribute_56 +
+     16.5155 * attribute_57 +
+     32.1562 * attribute_58 +
+   1569.3235
+
+Time taken to build model: 0.76 seconds
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient                  0.3456
+Mean absolute error                    712.8514
+Root mean squared error                978.948 
+Relative absolute error                 91.002  %
+Root relative squared error             93.8364 %
+Total Number of Instances            21103     
+

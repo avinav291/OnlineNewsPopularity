@@ -1,0 +1,134 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.CfsSubsetEval -P 1 -E 1
+Search:       weka.attributeSelection.BestFirst -D 1 -N 5
+Relation:     normalizedDataWithShares-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    21103
+Attributes:   60
+              attribute_1
+              attribute_2
+              attribute_3
+              attribute_4
+              attribute_5
+              attribute_6
+              attribute_7
+              attribute_8
+              attribute_9
+              attribute_10
+              attribute_11
+              attribute_12
+              attribute_13
+              attribute_14
+              attribute_15
+              attribute_16
+              attribute_17
+              attribute_18
+              attribute_19
+              attribute_20
+              attribute_21
+              attribute_22
+              attribute_23
+              attribute_24
+              attribute_25
+              attribute_26
+              attribute_27
+              attribute_28
+              attribute_29
+              attribute_30
+              attribute_31
+              attribute_32
+              attribute_33
+              attribute_34
+              attribute_35
+              attribute_36
+              attribute_37
+              attribute_38
+              attribute_39
+              attribute_40
+              attribute_41
+              attribute_42
+              attribute_43
+              attribute_44
+              attribute_45
+              attribute_46
+              attribute_47
+              attribute_48
+              attribute_49
+              attribute_50
+              attribute_51
+              attribute_52
+              attribute_53
+              attribute_54
+              attribute_55
+              attribute_56
+              attribute_57
+              attribute_58
+              attribute_59
+              attribute_60
+Evaluation mode:    10-fold cross-validation
+
+
+
+=== Attribute selection 10 fold cross-validation seed: 1 ===
+
+number of folds (%)  attribute
+           0(  0 %)      1 attribute_1
+           0(  0 %)      2 attribute_2
+           0(  0 %)      3 attribute_3
+           0(  0 %)      4 attribute_4
+           0(  0 %)      5 attribute_5
+           0(  0 %)      6 attribute_6
+          10(100 %)      7 attribute_7
+           0(  0 %)      8 attribute_8
+           0(  0 %)      9 attribute_9
+           0(  0 %)     10 attribute_10
+           0(  0 %)     11 attribute_11
+           0(  0 %)     12 attribute_12
+           0(  0 %)     13 attribute_13
+          10(100 %)     14 attribute_14
+           0(  0 %)     15 attribute_15
+          10(100 %)     16 attribute_16
+          10(100 %)     17 attribute_17
+           4( 40 %)     18 attribute_18
+           0(  0 %)     19 attribute_19
+          10(100 %)     20 attribute_20
+           0(  0 %)     21 attribute_21
+           0(  0 %)     22 attribute_22
+           0(  0 %)     23 attribute_23
+           0(  0 %)     24 attribute_24
+           0(  0 %)     25 attribute_25
+          10(100 %)     26 attribute_26
+          10(100 %)     27 attribute_27
+          10(100 %)     28 attribute_28
+           0(  0 %)     29 attribute_29
+          10(100 %)     30 attribute_30
+           0(  0 %)     31 attribute_31
+           0(  0 %)     32 attribute_32
+           1( 10 %)     33 attribute_33
+           0(  0 %)     34 attribute_34
+           0(  0 %)     35 attribute_35
+          10(100 %)     36 attribute_36
+          10(100 %)     37 attribute_37
+          10(100 %)     38 attribute_38
+           0(  0 %)     39 attribute_39
+           0(  0 %)     40 attribute_40
+           7( 70 %)     41 attribute_41
+           0(  0 %)     42 attribute_42
+           0(  0 %)     43 attribute_43
+           0(  0 %)     44 attribute_44
+           0(  0 %)     45 attribute_45
+           0(  0 %)     46 attribute_46
+           0(  0 %)     47 attribute_47
+           0(  0 %)     48 attribute_48
+           9( 90 %)     49 attribute_49
+           0(  0 %)     50 attribute_50
+           0(  0 %)     51 attribute_51
+           0(  0 %)     52 attribute_52
+           0(  0 %)     53 attribute_53
+           0(  0 %)     54 attribute_54
+           0(  0 %)     55 attribute_55
+           0(  0 %)     56 attribute_56
+           0(  0 %)     57 attribute_57
+           0(  0 %)     58 attribute_58
+           0(  0 %)     59 attribute_59
+
