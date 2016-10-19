@@ -9,12 +9,12 @@
 13 data_channel_is_lifestyle
 15 data_channel_is_bus
 18 data_channel_is_world
-20 kw_avg_min
+20 kw_avg_min  ////
 22 kw_max_max
 23 kw_avg_max
 29 self_refence_avg_sharess
 31 weekday_is_tuesday
-36 weekday_is_sunday
-37 is_weekend
-41 lda_03
+36 weekday_is_sunday  ////
+37 is_weekend ////
+41 lda_03 ////
 46 global_rate_negative_words
