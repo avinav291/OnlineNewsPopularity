@@ -1,6 +1,7 @@
 import numpy as np
 import csv
 import matplotlib.pyplot as plt
+import sklearn
 
 ##Mean absolute Error 659.46
 with open('../normalizedDataWithSharesReducedAttributes.csv', 'r') as f:
