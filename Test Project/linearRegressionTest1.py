@@ -1,6 +1,7 @@
 import numpy as np
 import csv
 import matplotlib.pyplot as plt
+import sklearn
 
 
 with open('../8 Oct 2016/OnlineNewsPopularity boxplot.csv', 'r') as f:
