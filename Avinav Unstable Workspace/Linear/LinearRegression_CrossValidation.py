@@ -1,10 +1,11 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.mlab import PCA
 import csv
 from sklearn.model_selection import KFold
 
 
-with open('normalizedDataWithSharesReducedAttributes.csv', 'r') as f:
+with open('normalizedDataWithShares.csv', 'r') as f:
   reader = csv.reader(f)
   X = list(reader)
 
@@ -19,6 +20,15 @@ X = np.delete(X, (-1), axis=1) #delete last column from x
 
 X = np.array(X).astype(np.float)
 Y = np.array(Y).astype(np.float).reshape(-1, 1)
+
+PCA_Data = PCA(X[..., 1:])
+X = PCA_Data.Y
+Ones = np.ones(shape=(X.shape[0], X.shape[1]+1))
+Ones[:, 1:] = X
+X = np.array(Ones).astype(np.float)
+print X[0]
+
+
 
 #print X
 #print Y
@@ -101,28 +111,63 @@ def gradient_descent(X, Y, alpha, num_iters):
     return theta, J_history
 
 
-def crossValidation(X,Y, k=10):
+def crossValidation(X,Y, k=5):
 
     kf = KFold(n_splits=k)
-    error = 0
+    error_mae = 0
+    error_mrae =0
+    error_pred =0
+    fold = 0
     for train_index, test_index in kf.split(X):
+        fold += 1
+        print ("%f\n" %fold)
         X_train, X_test = X[train_index], X[test_index]
         Y_train, Y_test = Y[train_index], Y[test_index]
         theta, J_history = gradient_descent(X_train, Y_train, alpha, num_iters)
-        error += calculateMeanAbsoluteError(X_test,Y_test, theta)
-    print error/k
+        error_mae += calculateMeanAbsoluteError(X_test,Y_test, theta)
+        error_mrae += calculateMeanRelativeAbsoluteError(X_test, Y_test, theta)
+        error_pred += calculatePred(X_test, Y_test, theta, 0.25)
+    print "Average MAE %f" %(error_mae/k)
+    print "Avergae MRAE%f"  %(error_mrae/k)
+    print "Avergae PRED 0.25 %f" % (error_pred / k)
+
 
 
 def calculateMeanAbsoluteError(X_test,Y_test, theta):
 
     dot = X_test.dot(theta)
     error = abs(Y_test - dot)
-    plt.scatter(Y_test, dot)
+    # plt.scatter(Y_test, dot)
 
     totalErr = error.sum()
     # plt.show()
-    print totalErr / error.shape[0]
-    return totalErr / error.shape[0]
+    print "\nMAE%f" %(totalErr/error.shape[0])
+    return totalErr/error.shape[0]
+
+def calculateMeanRelativeAbsoluteError(X_test, Y_test, theta):
+    dot = X_test.dot(theta)
+    error = abs(Y_test - dot)/Y_test
+    # plt.scatter(Y_test, dot)
+
+    totalErr = error.sum()
+    # plt.show()
+    print "\nMRAE:%f" %(totalErr/error.shape[0])
+    return totalErr/error.shape[0]
+
+def calculatePred(X_test,Y_test,theta,q=0.25):
+
+    dot = X_test.dot(theta)
+    error = abs((Y_test - dot)/Y_test)
+    k=0
+
+    for i in range(0,error.shape[0]):
+        if(error[i][0]<=q):
+            k=k+1
+
+    predErr = float(k)/float(error.shape[0])
+
+    print ("PRED ",q, " ", predErr)
+    return predErr
 
 # #normalize(X)
 # theta, J_history = gradient_descent(X, Y, alpha, num_iters)

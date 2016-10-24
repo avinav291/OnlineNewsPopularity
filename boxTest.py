@@ -4,14 +4,14 @@ import matplotlib.pyplot as plt
 
 np.set_printoptions(threshold=np.inf)
 
-with open('../OnlineNewsPopularity boxplot.csv', 'r') as f:
+with open('./Stable Workspace/Linear/normalizedDataWithShares.csv', 'r') as f:
   reader = csv.reader(f)
   csv_x = list(reader)
 
 
 csv_x = np.delete(csv_x, (0), axis=0)
 csv_x =  np.asarray(csv_x)
-csv_y = csv_x[:, 20]
+csv_y = csv_x[:,-1]
 
 print csv_y
 csv_x = np.delete(csv_x, (0), axis=1)
