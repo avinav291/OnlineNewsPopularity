@@ -26,7 +26,7 @@ Y = np.array(Y).astype(np.float).reshape(-1, 1)
 m, n = X.shape  #Number of attributes
 
 
-num_iters = 4000
+num_iters = 2000
 alpha = 0.003
 
 def normalize(X):
@@ -65,7 +65,7 @@ def cost_function(X, Y, theta):
    # No of Training Samples
     m = Y.size
 
-    cost = (-Y).T.dot(np.log(predictions)) - (1-Y).T.dot(np.log(1-predictions))
+    cost = (Y).T.dot(np.log(predictions)) + (1-Y).T.dot(np.log(1-predictions))
 
     J = (1.0 / m) * cost
     return J
@@ -110,26 +110,61 @@ def gradient_descent(X, Y, alpha, num_iters):
 
 def crossValidation(X,Y, k=10):
 
+    # Cross Validation Coeff
+    # Constants for confusion MAtrix
+    true_positive = 0
+    true_negative = 0
+    false_positive = 0
+    false_negative = 0
+
     kf = KFold(n_splits=k)
-    error = 0
+    error_mae = 0
+    error_mrae = 0
+    error_pred = 0
+    fold = 1
     for train_index, test_index in kf.split(X):
+        print("\n\nFold %f" %fold)
+        fold +=1
         X_train, X_test = X[train_index], X[test_index]
         Y_train, Y_test = Y[train_index], Y[test_index]
         theta, J_history = gradient_descent(X_train, Y_train, alpha, num_iters)
-        error += calculateMeanAbsoluteError(X_test,Y_test, theta)
-    print error/k
+
+        tp, fp, fn, tn = calculateConfusionMatrix(X_test, Y_test, theta, true_positive, true_negative, false_positive, false_negative)
+        true_positive+=tp
+        true_negative+=tn
+        false_positive+=fp
+        false_negative+=fn
+    # print "Average MAE %f" % (error_mae / k)
+    # # print "Avergae MRAE%f" % (error_mrae / k)
+    # # print "Avergae PRED 0.25 %f" % (error_pred / k)
+    print "Confusion Matrix"
+    print true_positive, false_positive
+    print false_negative, true_negative
 
 
-def calculateMeanAbsoluteError(X_test,Y_test, theta):
-
+def calculateConfusionMatrix(X_test,Y_test, theta, true_positive, true_negative, false_positive, false_negative):
     dot = X_test.dot(theta)
-    error = abs(Y_test - dot)
-    # plt.scatter(Y_test, dot)
 
-    totalErr = error.sum()
-    # plt.show()
-    print totalErr / error.shape[0]
-    return totalErr / error.shape[0]
+    for i in range(0, dot.shape[0]):
+        if(dot[i][0]>=0.5):
+            if(Y_test[i][0]>=0.5):
+                 true_positive+=1
+            else:
+                false_positive+=1
+
+        else:
+            if(Y_test[i][0]>=0.5):
+                false_negative +=1
+            else:
+                true_negative+=1
+
+    print "Confusion Matrix"
+    print true_positive, false_positive
+    print false_negative, true_negative
+    return true_positive, false_positive, false_negative, true_negative
+
+
+
 
 # #normalize(X)
 # theta, J_history = gradient_descent(X, Y, alpha, num_iters)
@@ -137,5 +172,6 @@ def calculateMeanAbsoluteError(X_test,Y_test, theta):
 # # print J_history
 # plt.plot(J_history)
 # plt.show()
+
 
 crossValidation(X, Y)
