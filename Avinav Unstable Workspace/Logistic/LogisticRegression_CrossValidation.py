@@ -86,7 +86,7 @@ def gradient_descent(X, Y, alpha, num_iters):
 
     for i in range(num_iters):
 
-        predictions = X.dot(theta)
+        predictions = hypothesis(X, theta)
 
         theta_size = theta.size
 
@@ -100,9 +100,9 @@ def gradient_descent(X, Y, alpha, num_iters):
             theta[it][0] -= alpha * (1.0 / m) * errors_x1.sum()
 
         J_history[i, 0] = cost_function(X, Y, theta)
-        if(i>0):
-            print i,J_history[i, 0]-J_history[i-1, 0]
-        print i, J_history[i, 0]
+        # if(i>0):
+        #     print i,J_history[i, 0]-J_history[i-1, 0]
+        # print i, J_history[i, 0]
     # plt.plot(J_history)
     # plt.show()
     return theta, J_history
@@ -112,10 +112,10 @@ def crossValidation(X,Y, k=10):
 
     # Cross Validation Coeff
     # Constants for confusion MAtrix
-    true_positive = 0
-    true_negative = 0
-    false_positive = 0
-    false_negative = 0
+    true_p = 0
+    true_n = 0
+    false_p = 0
+    false_n = 0
 
     kf = KFold(n_splits=k)
     error_mae = 0
@@ -129,20 +129,24 @@ def crossValidation(X,Y, k=10):
         Y_train, Y_test = Y[train_index], Y[test_index]
         theta, J_history = gradient_descent(X_train, Y_train, alpha, num_iters)
 
-        tp, fp, fn, tn = calculateConfusionMatrix(X_test, Y_test, theta, true_positive, true_negative, false_positive, false_negative)
-        true_positive+=tp
-        true_negative+=tn
-        false_positive+=fp
-        false_negative+=fn
+        tp, fp, fn, tn = calculateConfusionMatrix(X_test, Y_test, theta)
+        true_p+=tp
+        true_n+=tn
+        false_p+=fp
+        false_n+=fn
     # print "Average MAE %f" % (error_mae / k)
     # # print "Avergae MRAE%f" % (error_mrae / k)
     # # print "Avergae PRED 0.25 %f" % (error_pred / k)
-    print "Confusion Matrix"
-    print true_positive, false_positive
-    print false_negative, true_negative
+    print "Average Confusion Matrix"
+    print true_p, false_p
+    print false_n, true_n
+    print "Correct: ", (float)(true_n+true_p)/ (float)(false_n +  true_n + true_p + false_p)
 
-
-def calculateConfusionMatrix(X_test,Y_test, theta, true_positive, true_negative, false_positive, false_negative):
+def calculateConfusionMatrix(X_test,Y_test, theta):
+    true_positive = 0
+    true_negative = 0
+    false_positive = 0
+    false_negative = 0
     dot = X_test.dot(theta)
 
     for i in range(0, dot.shape[0]):
@@ -161,6 +165,7 @@ def calculateConfusionMatrix(X_test,Y_test, theta, true_positive, true_negative,
     print "Confusion Matrix"
     print true_positive, false_positive
     print false_negative, true_negative
+    print "Correct: ", (float)(true_negative + true_positive) / (float)(false_negative + true_negative + true_positive + false_positive)
     return true_positive, false_positive, false_negative, true_negative
 
 
