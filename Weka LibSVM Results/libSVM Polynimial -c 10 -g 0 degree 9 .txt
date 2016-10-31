@@ -1,0 +1,99 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibSVM -S 0 -K 1 -D 9 -G 0.0 -R 0.0 -N 0.5 -M 8000.0 -C 10.0 -E 0.001 -P 0.1 -model /Users/newuser -seed 1
+Relation:     normalizedDataWithShares-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    21103
+Attributes:   60
+              attribute_1
+              attribute_2
+              attribute_3
+              attribute_4
+              attribute_5
+              attribute_6
+              attribute_7
+              attribute_8
+              attribute_9
+              attribute_10
+              attribute_11
+              attribute_12
+              attribute_13
+              attribute_14
+              attribute_15
+              attribute_16
+              attribute_17
+              attribute_18
+              attribute_19
+              attribute_20
+              attribute_21
+              attribute_22
+              attribute_23
+              attribute_24
+              attribute_25
+              attribute_26
+              attribute_27
+              attribute_28
+              attribute_29
+              attribute_30
+              attribute_31
+              attribute_32
+              attribute_33
+              attribute_34
+              attribute_35
+              attribute_36
+              attribute_37
+              attribute_38
+              attribute_39
+              attribute_40
+              attribute_41
+              attribute_42
+              attribute_43
+              attribute_44
+              attribute_45
+              attribute_46
+              attribute_47
+              attribute_48
+              attribute_49
+              attribute_50
+              attribute_51
+              attribute_52
+              attribute_53
+              attribute_54
+              attribute_55
+              attribute_56
+              attribute_57
+              attribute_58
+              attribute_59
+              attribute_60
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Time taken to build model: 150.48 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       13525               64.0904 %
+Incorrectly Classified Instances      7578               35.9096 %
+Kappa statistic                          0.1652
+Mean absolute error                      0.3591
+Root mean squared error                  0.5992
+Relative absolute error                 75.589  %
+Root relative squared error            122.9548 %
+Total Number of Instances            21103     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.871    0.721    0.655      0.871    0.748      0.187    0.575     0.650     0
+                 0.279    0.129    0.578      0.279    0.376      0.187    0.575     0.441     1
+Weighted Avg.    0.641    0.491    0.625      0.641    0.604      0.187    0.575     0.569     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 11240  1668 |     a = 0
+  5910  2285 |     b = 1
+
