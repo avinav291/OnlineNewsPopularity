@@ -1,0 +1,108 @@
+//SVM Results
+//Dataset used: NormalizedDataWithShares.csv
+
+Fold 1.000000
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+	337	 160	|     a = 1
+	597	 1017	|     b = 0
+Correct:  0.641402179062
+
+
+Fold 2.000000
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+	166 114		|     a = 1
+	577 1254	|     b = 0
+Correct:  0.672666982473
+
+
+Fold 3.000000
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+
+	151 126		|     a = 1
+	561 1273	|     b = 0
+Correct:  0.674561819043
+
+
+Fold 4.000000
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+
+	135 113		|     a = 1
+	401 1461	|     b = 0
+Correct:  0.756398104265
+
+
+Fold 5.000000
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+
+	181 128		|     a = 1
+	465 1336	|     b = 0
+Correct:  0.718957345972
+
+
+Fold 6.000000
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+
+	246 156		|     a = 1
+	546 1162	|     b = 0
+Correct:  0.667298578199
+
+
+Fold 7.000000
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+
+	368 176		|     a = 1
+	550 1016	|     b = 0
+Correct:  0.655924170616
+
+
+Fold 8.000000
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+
+	448 206		|     a = 1
+	524 932		|     b = 0
+Correct:  0.654028436019
+
+
+Fold 9.000000
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+
+	503 285		|     a = 1
+	445 877		|     b = 0
+Correct:  0.654028436019
+
+
+Fold 10.000000
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+
+	536 287		|     a = 1
+	458 829		|     b = 0
+Correct:  0.64691943128
+
+
+=== Average Confusion Matrix ===
+
+     a     b   <-- classified as
+
+	3071 1751	|     a = 1
+	5124 11157	|     b = 0
+Correct:  0.674216935981
