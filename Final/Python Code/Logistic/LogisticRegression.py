@@ -1,6 +1,7 @@
 import numpy as np
 import csv
 from sklearn.model_selection import KFold
+import matplotlib.pyplot as plt
 
 with open('normalizedDataWithShares.csv', 'r') as f:
   reader = csv.reader(f)
@@ -64,6 +65,11 @@ def gradient_descent(X, Y, alpha, num_iters):
 
         J_history[i, 0] = cost_function(X, Y, theta)
 
+    plt.xlabel("Iterations")
+    plt.ylabel("Cost")
+    plt.suptitle("Iterations vs Cost")
+    plt.plot(J_history)
+    plt.show()
     return theta, J_history
 
 

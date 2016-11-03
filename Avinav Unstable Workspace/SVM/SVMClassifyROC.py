@@ -8,7 +8,7 @@ from sklearn.metrics import roc_curve, auc
 
 #	open the csv file for reading data
 #	X: stores the whole csv file
-with open('normalizedDataWithSharesReducedAttributes.csv', 'r') as f:
+with open('normalizedDataWithSharesReducedAttributesMedian1200.csv', 'r') as f:
     reader = csv.reader(f)
     X = list(reader)
 
@@ -98,7 +98,6 @@ def displayResultSummary(tp, fp, tn, fn, mae):
     print "TP Rate/Recall", tp/float(tp+fn)
     print "FP Rate", fp/float(fp+tn)
     print "Precision", tp/float(tp+fp)
-    print "Recall"
 
 def calculateMeanAbsoluteError(Y_proba,Y_test):
 
@@ -116,7 +115,9 @@ def plotROC(Y_test, Y_proba):
     print roc_auc
 
     plt.plot(fpr,tpr)
-    plt.show()
+    plt.draw()
+    plt.pause(0.001)
+    # plt.show()
 
 
 # Calculation of confusion matrix
