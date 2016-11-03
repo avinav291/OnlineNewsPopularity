@@ -1,0 +1,70 @@
+//Linear Regression
+//dataSet:normalizedDataWithSharesReducedAttributes.csv
+
+
+/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 "/Users/newuser/Documents/Minor V Sem/OnlineNewsPopularity/Stable Workspace/Linear/LinearRegression_CrossValidation.py"
+Fold 1
+
+MAE900.514129
+
+MRAE:1.060861
+('PRED ', 0.25, ' ', 0.2354334438654666)
+Fold 2
+
+MAE791.868869
+
+MRAE:0.631975
+('PRED ', 0.25, ' ', 0.28422548555187116)
+Fold 3
+
+MAE734.965968
+
+MRAE:0.629327
+('PRED ', 0.25, ' ', 0.3164377072477499)
+Fold 4
+
+MAE722.133317
+
+MRAE:0.690497
+('PRED ', 0.25, ' ', 0.3061611374407583)
+Fold 5
+
+MAE716.793062
+
+MRAE:0.626743
+('PRED ', 0.25, ' ', 0.2981042654028436)
+Fold 6
+
+MAE704.529597
+
+MRAE:0.633008
+('PRED ', 0.25, ' ', 0.32559241706161135)
+Fold 7
+
+MAE667.048172
+
+MRAE:0.647527
+('PRED ', 0.25, ' ', 0.3246445497630332)
+Fold 8
+
+MAE691.807890
+
+MRAE:0.676529
+('PRED ', 0.25, ' ', 0.3165876777251185)
+Fold 9
+
+MAE647.093960
+
+MRAE:0.786355
+('PRED ', 0.25, ' ', 0.3360189573459716)
+Fold 10
+
+MAE646.525602
+
+MRAE:0.662762
+('PRED ', 0.25, ' ', 0.3227488151658768)
+Average Mean Absolute Error 722.328057
+Average Mean Relative Absolute Error0.704558
+Average PRED 0.25 0.306595
+
+Process finished with exit code 0

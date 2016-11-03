@@ -1,0 +1,128 @@
+//SVM Results
+//Dataset used: NormalizedDataWithSharesReducedAttributes.csv
+
+/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 "/Users/newuser/Documents/Minor V Sem/OnlineNewsPopularity/Avinav Unstable Workspace/SVM/SVMClassify.py"
+
+
+Fold 1.000000
+/Library/Python/2.7/site-packages/sklearn/utils/validation.py:526: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+(18992, 1)
+(2111, 1)
+Confusion Matrix
+167 121
+645 1178
+Correct:  0.637138796779
+
+Mean Absolute Error0.552486
+
+
+Fold 2.000000
+(18992, 1)
+(2111, 1)
+Confusion Matrix
+268 148
+580 1115
+Correct:  0.655139744197
+
+Mean Absolute Error0.575888
+
+
+Fold 3.000000
+(18992, 1)
+(2111, 1)
+Confusion Matrix
+281 172
+506 1152
+Correct:  0.678825201326
+
+Mean Absolute Error0.586595
+
+
+Fold 4.000000
+(18993, 1)
+(2110, 1)
+Confusion Matrix
+273 124
+528 1185
+Correct:  0.690995260664
+
+Mean Absolute Error0.592422
+
+
+Fold 5.000000
+(18993, 1)
+(2110, 1)
+Confusion Matrix
+229 131
+495 1255
+Correct:  0.703317535545
+
+Mean Absolute Error0.598309
+
+
+Fold 6.000000
+(18993, 1)
+(2110, 1)
+Confusion Matrix
+205 115
+513 1277
+Correct:  0.702369668246
+
+Mean Absolute Error0.600868
+
+
+Fold 7.000000
+(18993, 1)
+(2110, 1)
+Confusion Matrix
+185 104
+547 1274
+Correct:  0.691469194313
+
+Mean Absolute Error0.600542
+
+
+Fold 8.000000
+(18993, 1)
+(2110, 1)
+Confusion Matrix
+192 69
+513 1336
+Correct:  0.724170616114
+
+Mean Absolute Error0.613036
+
+
+Fold 9.000000
+(18993, 1)
+(2110, 1)
+Confusion Matrix
+154 92
+477 1387
+Correct:  0.730331753555
+
+Mean Absolute Error0.613325
+
+
+Fold 10.000000
+(18993, 1)
+(2110, 1)
+Confusion Matrix
+179 122
+476 1333
+Correct:  0.716587677725
+
+Mean Absolute Error0.601971
+Average Confusion Matrix
+2133 1198
+5280 12492
+Correctly Classified Instances: 14625 	69.3029427096 %
+Incorrectly Classified Instances: 6478 	30.6970572904 %
+Mean Absolute Error:	0.593544224221
+TP Rate/Recall 0.287737757993
+FP Rate 0.0875091307524
+Precision 0.640348243771
+Recall
+
+Process finished with exit code 0

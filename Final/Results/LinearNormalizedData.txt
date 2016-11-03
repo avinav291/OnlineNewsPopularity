@@ -1,0 +1,67 @@
+//Linear Regression
+//dataSet:normalizedDataWithShares.csv
+
+/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 "/Users/newuser/Documents/Minor V Sem/OnlineNewsPopularity/Stable Workspace/Linear/LinearRegression_CrossValidation.py"
+Fold 1
+
+MAE771.067754
+
+MRAE:0.932225
+PRED  0.25   0.319279962103
+Fold 2
+
+MAE707.662121
+
+MRAE:1.022215
+PRED  0.25   0.310753197537
+Fold 3
+
+MAE696.434510
+
+MRAE:0.670007
+PRED  0.25   0.309332070109
+Fold 4
+
+MAE632.285636
+
+MRAE:0.787600
+PRED  0.25   0.290047393365
+Fold 5
+
+MAE631.749076
+
+MRAE:0.590769
+PRED  0.25   0.32654028436
+Fold 6
+
+MAE692.246852
+
+MRAE:0.559071
+PRED  0.25   0.302369668246
+Fold 7
+
+MAE697.459875
+
+MRAE:0.527940
+PRED  0.25   0.319431279621
+Fold 8
+
+MAE770.011093
+
+MRAE:0.593903
+PRED  0.25   0.312322274882
+Fold 9
+
+MAE771.716676
+
+MRAE:0.598804
+PRED  0.25   0.307109004739
+Fold 10
+
+MAE757.669653
+
+MRAE:0.527930
+PRED  0.25   0.316587677725
+Average Mean Absolute Error 712.830325
+Average Mean Relative Absolute Error0.681046
+Average PRED 0.25 0.311377

@@ -1,0 +1,105 @@
+//Logistic Regression
+//Dataset:normalizedDataWithShares.csv
+
+/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 "/Users/newuser/Documents/Minor V Sem/OnlineNewsPopularity/Avinav Unstable Workspace/Logistic/LogisticRegression_CrossValidation.py"
+
+
+Fold 1.000000
+Confusion Matrix
+146 57
+788 1120
+Correct:  0.599715774514
+
+Mean Absolute Error0.845185
+
+
+Fold 2.000000
+Confusion Matrix
+71 27
+672 1341
+Correct:  0.668877309332
+
+Mean Absolute Error0.946271
+
+
+Fold 3.000000
+Confusion Matrix
+43 24
+669 1375
+Correct:  0.671719564188
+
+Mean Absolute Error1.033239
+
+
+Fold 4.000000
+Confusion Matrix
+61 40
+475 1534
+Correct:  0.755924170616
+
+Mean Absolute Error0.927239
+
+
+Fold 5.000000
+Confusion Matrix
+76 55
+570 1409
+Correct:  0.703791469194
+
+Mean Absolute Error0.911725
+
+
+Fold 6.000000
+Confusion Matrix
+128 61
+664 1257
+Correct:  0.656398104265
+
+Mean Absolute Error0.836438
+
+
+Fold 7.000000
+Confusion Matrix
+193 71
+725 1121
+Correct:  0.622748815166
+
+Mean Absolute Error0.810745
+
+
+Fold 8.000000
+Confusion Matrix
+228 93
+744 1045
+Correct:  0.603317535545
+
+Mean Absolute Error0.771390
+
+
+Fold 9.000000
+Confusion Matrix
+300 134
+648 1028
+Correct:  0.629383886256
+
+Mean Absolute Error0.678664
+
+
+Fold 10.000000
+Confusion Matrix
+370 170
+624 946
+Correct:  0.623696682464
+
+Mean Absolute Error0.615069
+Average Confusion Matrix
+1616 732
+6579 12176
+Correctly Classified Instances: 13792 	65.3556366393 %
+Incorrectly Classified Instances: 7311 	34.6443633607 %
+Mean Absolute Error:	0.837596492743
+TP Rate/Recall 0.197193410616
+FP Rate 0.0567090176635
+Precision 0.688245315162
+
+Process finished with exit code 0
