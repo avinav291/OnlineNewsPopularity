@@ -68,7 +68,7 @@ def gradient_descent(X, Y, alpha, num_iters):
     return theta, J_history
 
 
-def crossValidation(X,Y, k=10):
+def LinearCrossValidation(X,Y, k=10):
 
     kf = KFold(n_splits=k)
     k=0
@@ -128,4 +128,4 @@ def calculatePred(X_test,Y_test,theta,q=0.25):
     print "PRED ",q, " ", predErr
     return predErr
 
-crossValidation(X, Y)
+LinearCrossValidation(X, Y)
