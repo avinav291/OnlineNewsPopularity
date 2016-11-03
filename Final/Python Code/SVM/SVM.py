@@ -7,7 +7,7 @@ from sklearn.model_selection import KFold
 
 #	open the csv file for reading data
 #	X: stores the whole csv file
-with open('normalizedData.csv', 'r') as f:
+with open('normalizedDataWithSharesReducedAttributes.csv', 'r') as f:
     reader = csv.reader(f)
     X = list(reader)
 
@@ -41,6 +41,7 @@ def SVCCrossValidation(X, Y,Cost=1.0, k=10):
     true_n = 0
     false_p = 0
     false_n = 0
+    mae = 0
 
     # KFold library function(Sklearn) for calculating train and test indices
     kf = KFold(n_splits=k)
@@ -59,19 +60,21 @@ def SVCCrossValidation(X, Y,Cost=1.0, k=10):
         print Y_train.shape
         # SVM classifier with paramters
         # Kernel:Rbf
-        clf = svm.SVC()
+        clf = svm.SVC(probability=True, C=Cost)
         clf.fit(X_train, Y_train)
-        svm.SVC(C=Cost, cache_size=200, class_weight=None, coef0=0.0,
-            decision_function_shape=None, degree=3, gamma='auto', kernel='rbf',
-            max_iter=-1, probability=False, random_state=None, shrinking=True,
-            tol=0.001, verbose=False)
+
 
         # Y_calc as the predicted Y for the test Data by the SVC Classifier
         Y_calc = clf.predict(X_test)
+        Y_proba = clf.predict_proba(X_test)
+        Y_proba = np.delete(Y_proba, (-1), axis=1)
+        print Y_proba.shape
 
         # Confusion Matrix Calculation
         tp, fp, fn, tn = calculateConfusionMatrix(Y_calc, Y_test)
+        mae_fold=calculateMeanAbsoluteError(Y_proba, Y_test)
 
+        mae+=mae_fold
         true_p += tp
         true_n += tn
         false_p += fp
@@ -80,7 +83,30 @@ def SVCCrossValidation(X, Y,Cost=1.0, k=10):
     print "Average Confusion Matrix"
     print true_p, false_p
     print false_n, true_n
-    print "Correct: ", (float)(true_n + true_p) / (float)(false_n + true_n + true_p + false_p)
+
+    displayResultSummary(true_p, false_p, true_n, false_n, mae/k)
+
+
+def displayResultSummary(tp, fp, tn, fn, mae):
+    total = tp+fp+tn+fn
+    print "Correctly Classified Instances:", (tp+tn),"\t",((float(tp+tn)/total)*100), "%"
+    print "Incorrectly Classified Instances:", (fp + fn), "\t", ((float(fp+fn) / total) * 100), "%"
+    print "Mean Absolute Error:\t",mae
+    print "TP Rate/Recall", tp/float(tp+fn)
+    print "FP Rate", fp/float(fp+tn)
+    print "Precision", tp/float(tp+fp)
+    print "Recall"
+
+def calculateMeanAbsoluteError(Y_proba,Y_test):
+
+    error = abs(Y_test - Y_proba)
+    # plt.scatter(Y_test, dot)
+
+    totalErr = error.sum()
+    # plt.show()
+    print "\nMean Absolute Error%f" %(totalErr/error.shape[0])
+    return totalErr/error.shape[0]
+
 
 # Calculation of confusion matrix
 # Input paramters:

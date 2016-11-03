@@ -93,9 +93,6 @@ def LogisticCrossValidation(X,Y, k=10):
         false_p+=fp
         false_n+=fn
         mae +=mae_fold
-    # print "Average MAE %f" % (error_mae / k)
-    # # print "Avergae MRAE%f" % (error_mrae / k)
-    # # print "Avergae PRED 0.25 %f" % (error_pred / k)
     print "Average Confusion Matrix"
     print true_p, false_p
     print false_n, true_n

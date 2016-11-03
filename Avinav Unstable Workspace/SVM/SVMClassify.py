@@ -108,11 +108,6 @@ def calculateMeanAbsoluteError(Y_proba,Y_test):
     return totalErr/error.shape[0]
 
 
-
-
-
-
-
 # Calculation of confusion matrix
 # Input paramters:
 # Y_calc:	Calculated value of share group(0/1)
