@@ -35,7 +35,7 @@ m, n = X.shape
 #	k:	folds in cross validation by default 10
 # 	Cost:	Cost for SVC classifier
 # Return:	None
-def SVCCrossValidation(X, Y,Cost=1.0, k=10):
+def SVCCrossValidation(X, Y, Cost=1.0, k=10):
 
     # Constants for confusion MAtrix
     true_p = 0
@@ -61,14 +61,14 @@ def SVCCrossValidation(X, Y,Cost=1.0, k=10):
         print Y_train.shape
         # SVM classifier with paramters
         # Kernel:Rbf
-        clf = svm.SVC(probability=True, C=Cost)
+        clf = svm.SVC(probability=True, C=Cost, verbose=True, cache_size=2000)
         clf.fit(X_train, Y_train)
 
 
         # Y_calc as the predicted Y for the test Data by the SVC Classifier
         Y_calc = clf.predict(X_test)
         Y_proba = clf.predict_proba(X_test)
-        Y_proba = np.delete(Y_proba, (-1), axis=1)
+        Y_proba = np.delete(Y_proba, (0), axis=1)
         print Y_proba.shape
 
         plotROC(Y_test, Y_proba)
@@ -114,10 +114,11 @@ def plotROC(Y_test, Y_proba):
     roc_auc = auc(fpr, tpr)
     print roc_auc
 
+    plt.xlabel("False Positive Rate")
+    plt.ylabel("True Positive Rate")
+    plt.suptitle("ROC Curve")
     plt.plot(fpr,tpr)
-    plt.draw()
-    plt.pause(0.001)
-    # plt.show()
+    plt.show()
 
 
 # Calculation of confusion matrix
