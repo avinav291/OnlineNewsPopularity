@@ -8,7 +8,7 @@ from sklearn.metrics import roc_curve, auc
 
 #	open the csv file for reading data
 #	X: stores the whole csv file
-with open('normalizedDataWithSharesReducedAttributesMedian1200.csv', 'r') as f:
+with open('normalizedDataWithShares.csv', 'r') as f:
     reader = csv.reader(f)
     X = list(reader)
 

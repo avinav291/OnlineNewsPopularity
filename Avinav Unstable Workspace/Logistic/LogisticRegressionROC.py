@@ -4,7 +4,7 @@ from sklearn.model_selection import KFold
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
 
-with open('normalizedDataWithShares.csv', 'r') as f:
+with open('normalizedDataWithSharesReducedAttributes.csv', 'r') as f:
   reader = csv.reader(f)
   X = list(reader)
 
