@@ -1,0 +1,219 @@
+C:\Python27\python.exe "F:/Work/Minor1/OnlineNewsPopularity/Avinav Unstable Workspace/SVM/SVMClassifyROC.py"
+
+
+Fold 1.000000
+(18992, 1)
+C:\Python27\lib\site-packages\sklearn\utils\validation.py:526: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+[LibSVM]............*.....*
+optimization finished, #iter = 17080
+obj = -9147.961307, rho = 0.016834
+nSV = 11145, nBSV = 9111
+Total nSV = 11145
+............*.....*
+optimization finished, #iter = 17277
+obj = -9161.630879, rho = -0.020686
+nSV = 11178, nBSV = 9162
+Total nSV = 11178
+............*.....*
+optimization finished, #iter = 17551
+obj = -9172.359949, rho = 0.071955
+nSV = 11140, nBSV = 9100
+Total nSV = 11140
+.............*.....*
+optimization finished, #iter = 18150
+obj = -9051.224600, rho = 0.066329
+nSV = 11066, nBSV = 8937
+Total nSV = 11066
+.............*.....*
+optimization finished, #iter = 18157
+obj = -9083.778314, rho = 0.073486
+nSV = 11084, nBSV = 8963
+Total nSV = 11084
+...............*......*
+optimization finished, #iter = 21824
+obj = -11452.568981, rho = -0.030515
+nSV = 13826, nBSV = 11390
+Total nSV = 13826
+(2111, 1)
+0.694588372063
+Confusion Matrix
+337 160
+597 1017
+Correct:  0.641402179062
+
+Mean Absolute Error0.436034
+
+
+Fold 2.000000
+(18992, 1)
+[LibSVM]............*....*
+optimization finished, #iter = 16692
+obj = -9229.601382, rho = 0.011141
+nSV = 11253, nBSV = 9270
+Total nSV = 11253
+............*.....*
+optimization finished, #iter = 17133
+obj = -9228.079557, rho = 0.019567
+nSV = 11279, nBSV = 9206
+Total nSV = 11279
+.............*....*
+optimization finished, #iter = 17639
+obj = -9137.147685, rho = 0.053519
+nSV = 11184, nBSV = 9077
+Total nSV = 11184
+.............*....*
+optimization finished, #iter = 17536
+obj = -9170.061072, rho = -0.006903
+nSV = 11208, nBSV = 9140
+Total nSV = 11208
+............*.....*
+optimization finished, #iter = 17336
+obj = -9152.934189, rho = 0.092196
+nSV = 11206, nBSV = 9111
+Total nSV = 11206
+...............*.......*
+optimization finished, #iter = 22011
+obj = -11524.890493, rho = -0.015731
+nSV = 13930, nBSV = 11484
+Total nSV = 13930
+(2111, 1)
+0.670976875792
+Confusion Matrix
+166 114
+577 1254
+Correct:  0.672666982473
+
+Mean Absolute Error0.419712
+
+
+Fold 3.000000
+(18992, 1)
+[LibSVM]............*.....*
+optimization finished, #iter = 17018
+obj = -9280.067025, rho = 0.054433
+nSV = 11287, nBSV = 9277
+Total nSV = 11287
+............*.....*
+optimization finished, #iter = 17164
+obj = -9336.430646, rho = 0.029541
+nSV = 11331, nBSV = 9333
+Total nSV = 11331
+............*.....*
+optimization finished, #iter = 17314
+obj = -9223.952234, rho = 0.004830
+nSV = 11206, nBSV = 9206
+Total nSV = 11206
+.............*....*
+optimization finished, #iter = 17721
+obj = -9205.697002, rho = 0.036892
+nSV = 11186, nBSV = 9130
+Total nSV = 11186
+............*.....*
+optimization finished, #iter = 17034
+obj = -9113.603332, rho = 0.054121
+nSV = 11125, nBSV = 9098
+Total nSV = 11125
+...............*......*
+optimization finished, #iter = 21639
+obj = -11580.278651, rho = -0.022340
+nSV = 13954, nBSV = 11556
+Total nSV = 13954
+(2111, 1)
+0.662583024793
+Confusion Matrix
+151 126
+561 1273
+Correct:  0.674561819043
+
+Mean Absolute Error0.409239
+
+
+Fold 4.000000
+(18993, 1)
+[LibSVM]............*....*
+optimization finished, #iter = 16561
+obj = -9536.203933, rho = -0.051710
+nSV = 11543, nBSV = 9595
+Total nSV = 11543
+............*....*
+optimization finished, #iter = 16370
+obj = -9413.959225, rho = 0.045686
+nSV = 11409, nBSV = 9471
+Total nSV = 11409
+............*....*
+optimization finished, #iter = 16614
+obj = -9333.308192, rho = -0.093521
+nSV = 11358, nBSV = 9358
+Total nSV = 11358
+............*....*
+optimization finished, #iter = 16925
+obj = -9367.689816, rho = 0.044101
+nSV = 11379, nBSV = 9368
+Total nSV = 11379
+............*....*
+optimization finished, #iter = 16920
+obj = -9320.959451, rho = 0.076284
+nSV = 11360, nBSV = 9322
+Total nSV = 11360
+...............*......*
+optimization finished, #iter = 21027
+obj = -11791.992113, rho = 0.015079
+nSV = 14198, nBSV = 11832
+Total nSV = 14198
+(2110, 1)
+0.668806539096
+Confusion Matrix
+135 113
+401 1461
+Correct:  0.756398104265
+
+Mean Absolute Error0.380266
+
+
+Fold 5.000000
+(18993, 1)
+[LibSVM]............*....*
+optimization finished, #iter = 16813
+obj = -9368.213595, rho = 0.022529
+nSV = 11403, nBSV = 9408
+Total nSV = 11403
+............*....*
+optimization finished, #iter = 16228
+obj = -9303.701359, rho = -0.037870
+nSV = 11279, nBSV = 9340
+Total nSV = 11279
+............*.....*
+optimization finished, #iter = 17216
+obj = -9253.073079, rho = 0.048374
+nSV = 11294, nBSV = 9262
+Total nSV = 11294
+.............*....*
+optimization finished, #iter = 17112
+obj = -9248.820295, rho = -0.022677
+nSV = 11307, nBSV = 9265
+Total nSV = 11307
+............*.....*
+optimization finished, #iter = 17582
+obj = -9240.730911, rho = 0.018373
+nSV = 11265, nBSV = 9166
+Total nSV = 11265
+...............*......*
+optimization finished, #iter = 21083
+obj = -11650.955932, rho = 0.000085
+nSV = 14056, nBSV = 11672
+Total nSV = 14056
+(2110, 1)
+0.691170126377
+Confusion Matrix
+181 128
+465 1336
+Correct:  0.718957345972
+
+Mean Absolute Error0.396979
+
+
+Fold 6.000000
+(18993, 1)
+[LibSVM]
+Process finished with exit code 1
