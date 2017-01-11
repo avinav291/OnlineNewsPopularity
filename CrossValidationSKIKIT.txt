@@ -1,3 +1,0 @@
-http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
-
-http://scikit-learn.org/0.17/modules/generated/sklearn.cross_validation.KFold.html
