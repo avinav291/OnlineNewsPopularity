@@ -1,0 +1,3 @@
+Prediction and Evaluation of the Popularity of Online News Articles
+
+The objective was to help publishing houses determine the popularity of unpublished articles and allocate resources accordingly. A data set containing various features of articles by mashable.com was analyzed. The data was preprocessed (outlier reduction, normalization and removal of collinear attributes) and multiple machine learning algorithms (multivariate linear regression, logistic regression, support vector machine with radial basis function kernel) were applied. The system classified articles with 70% accuracy (approximately).
